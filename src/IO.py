@@ -3,12 +3,11 @@ import pickle
 
 UNIGRAM = 0
 BIGRAM = 1
-ADDONE = 2
-
+ADD_ONE = 2
 
 class IO:
     """"This class will handle saving and loading the vocabs for the language models"""
-    _models = "unigram.vocab", "bigram.vocab", "bigram_addone.vocab"
+    _models = "unigram.vocab", "bigram.vocab"
 
     def save(self, model, vocab):
         return pickle.dump(vocab, open("../var/models/" + self._models[model], "wb"))
